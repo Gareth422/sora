@@ -25,6 +25,8 @@ os.iso: kernel.elf
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
+%.o: %.cpp
+	$(CC) $(CFLAGS) $< -o $@
 %.o: %.s
 	$(AS) $(ASFLAGS) $< -o $@
 clean:
